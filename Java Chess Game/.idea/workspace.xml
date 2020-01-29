@@ -11,10 +11,13 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_2_10_0.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" afterDir="false" />
+=======
+>>>>>>> eeabd004d3bc8c4de870c6c7103ced2801696ff7
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
@@ -34,7 +37,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< HEAD
         <option value="Enum" />
+=======
+>>>>>>> eeabd004d3bc8c4de870c6c7103ced2801696ff7
         <option value="Class" />
       </list>
     </option>
@@ -58,11 +64,18 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+=======
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jar_files.zip!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+>>>>>>> eeabd004d3bc8c4de870c6c7103ced2801696ff7
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -79,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+<<<<<<< HEAD
     <ignored-roots>
       <path value="$PROJECT_DIR$/GM-Chess" />
     </ignored-roots>
@@ -88,14 +102,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="285" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580328887578" />
+=======
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="285" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1580220199521">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="285" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580220199521" />
+>>>>>>> eeabd004d3bc8c4de870c6c7103ced2801696ff7
     <state x="226" y="262" key="FileChooserDialogImpl" timestamp="1580322578372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="226" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580322578372" />
+<<<<<<< HEAD
     <state x="0" y="95" key="SettingsEditor" timestamp="1580328519464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580328519464" />
+=======
+    <state x="0" y="95" key="SettingsEditor" timestamp="1580323236448">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580323236448" />
+>>>>>>> eeabd004d3bc8c4de870c6c7103ced2801696ff7
     <state x="190" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580322554721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

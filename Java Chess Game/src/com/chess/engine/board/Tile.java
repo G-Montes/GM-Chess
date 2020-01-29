@@ -15,7 +15,6 @@ import java.util.Map;
 */
 public abstract class Tile {
     protected final int tileCoordinate;
-
     private static final Map<Integer,EmptyTile> EMPTY_TILES_CACHE = createAllPossibleEmptyTiles();
 
     //Creates all the tiles at once at the beginning
@@ -45,7 +44,6 @@ public abstract class Tile {
 
     public static final class EmptyTile extends Tile {
         private EmptyTile(final int coordinate){
-
             super(coordinate);
         }
 
@@ -56,7 +54,6 @@ public abstract class Tile {
 
         @Override
         public Piece getPiece(){
-
             return null;
         }
     }
@@ -71,13 +68,11 @@ public abstract class Tile {
 
         @Override
         public boolean isTileOccupied() {
-
             return true;
         }
 
         @Override
         public Piece getPiece() {
-
             return this.pieceOnTile;
         }
     }
