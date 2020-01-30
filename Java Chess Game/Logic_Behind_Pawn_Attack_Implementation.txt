@@ -1,0 +1,49 @@
+**********************There is a piece on the first column:
+****current candidate is equal to 7:
+	For a white piece:
+		isFCE: 
+			-returns false (because an offset of 7 is a legal move)
+		isECE:
+			-returns false (because the piece is not in the 8th column)
+	For a black piece:
+		isFCE: 
+			-returns true (move is illegal)
+		isECE: 
+			-returns false (because the piece is not in the 8th column)
+****current candidate is equal to 9:
+	For a white piece:
+		isFCE: 
+			-returns true (move is illegal)
+		isECE:
+			-returns false (because the piece is not in the 8th column)
+	For a black piece:
+		isFCE: 
+			-returns false (because an offset of 9 is a legal move)
+		isECE: 
+			-returns false (because the piece is not in the 8th column)
+
+
+
+***********************There is a piece on the 8th column:
+****current candidate is equal to 7:
+	For a white piece:
+		isFCE:
+			-returns false (because the piece is not in the 1st column)
+		isECE:
+			-returns true (move is illegal)
+	For a black piece:
+		isFCE:
+			-returns false (because the piece is not in the 1st column)
+		isECE:
+			-returns false (because an offset of 7 is a legal move)
+****current candidate is equal to 9:
+	For a white piece:
+		isFCE: 
+			-returns false (because the piece is not in the 1st column)
+		isECE:
+			-returns false (becuase an offset of 9 is a legal move)
+	For a black piece:
+		isFCE: 
+			-returns false (because the piece is not in the 1st column)
+		isECE: 
+			-returns true (move is illegal)

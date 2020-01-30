@@ -14,7 +14,7 @@ import java.util.List;
 import static com.chess.engine.board.Move.*;
 
 public class Queen extends Piece {
-    private static final int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-9,-7,-8,-1,1,7,8,9};
+    private static final int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-9,-8,-7,-1,1,7,8,9};
     Queen(int piecePosition, Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
