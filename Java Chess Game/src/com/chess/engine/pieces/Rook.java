@@ -13,18 +13,16 @@ import java.util.List;
 
 import static com.chess.engine.board.Move.*;
 
-public class Bishop extends Piece {
-    private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-9,-7,7,9};
-
-    Bishop(int piecePosition, Alliance pieceAlliance) {
+public class Rook extends Piece{
+    private static final int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-8,-1,1,8};
+    Rook(int piecePosition, Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
-
     @Override
     public Collection<Move> calculateLegalMoves(final Board board) {
         final List<Move> legalMoves = new ArrayList<>();
 
-        for (final int candidateCoordinateOffset: CANDIDATE_MOVE_VECTOR_COORDINATES){
+        for(final int candidateCoordinateOffset : CANDIDATE_MOVE_VECTOR_COORDINATES){
             int candidateDestinationCoordinate = this.piecePosition;
 
             while(BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)){
@@ -61,11 +59,11 @@ public class Bishop extends Piece {
         }
         return ImmutableList.copyOf(legalMoves);
     }
-    //Edge cases for the bishop that would result in an illegal candidate move
+    //Edge cases for the rook that would result in an illegal candidate move
     private static boolean isFirstColumnExclusion(final int currentPosition, final int candidateOffset){
-        return BoardUtils.FIRST_COLUMN[currentPosition] && (candidateOffset == -9 || candidateOffset == 7);
+        return BoardUtils.FIRST_COLUMN[currentPosition] && candidateOffset == -1;
     }
     private static boolean isEighthColumnExclusion(final int currentPosition, final int candidateOffset){
-        return BoardUtils.EIGHTH_COLUMN[currentPosition] && (candidateOffset == -7 || candidateOffset == 9);
+        return BoardUtils.EIGHTH_COLUMN[currentPosition] && candidateOffset == 1;
     }
 }
