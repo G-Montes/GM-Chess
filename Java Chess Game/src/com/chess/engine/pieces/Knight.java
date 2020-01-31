@@ -62,6 +62,12 @@ public class Knight extends Piece {
         }
         return ImmutableList.copyOf(legalMoves);
     }
+
+    @Override
+    public String toString() {
+        return PieceType.KNIGHT.toString();
+    }
+
     //The edge cases that would result in a potential knight move to be out of bounds
     private static boolean isFirstColumnExclusion(final int currentPosition, final int candidateOffset){
         return BoardUtils.FIRST_COLUMN[currentPosition] && (candidateOffset == -17 ||

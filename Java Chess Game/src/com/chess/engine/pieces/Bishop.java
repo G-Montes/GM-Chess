@@ -61,6 +61,12 @@ public class Bishop extends Piece {
         }
         return ImmutableList.copyOf(legalMoves);
     }
+
+    @Override
+    public String toString() {
+        return PieceType.BISHOP.toString();
+    }
+
     //Edge cases for the bishop that would result in an illegal candidate move
     private static boolean isFirstColumnExclusion(final int currentPosition, final int candidateOffset){
         return BoardUtils.FIRST_COLUMN[currentPosition] && (candidateOffset == -9 || candidateOffset == 7);

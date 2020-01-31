@@ -82,6 +82,12 @@ public class Pawn extends Piece {
         }
         return ImmutableList.copyOf(legalMoves);
     }
+
+    @Override
+    public String toString() {
+        return PieceType.PAWN.toString();
+    }
+
     //Edge cases for the queen that would result in an illegal candidate move
     private static boolean isFirstColumnExclusion(final int currentPosition, final int candidateOffset, final Alliance alliance){
         if (alliance.isWhite()){
