@@ -1,4 +1,4 @@
-**********************There is a piece on the first column:
+***********************There is a piece on the first column:
 ****current candidate is equal to 7:
 	For a white piece:
 		isFCE: 
