@@ -13,7 +13,7 @@ import java.util.List;
 
 public class King extends Piece {
     private static final int[] CANDIDATE_MOVE_VECTOR = {-9,-8,-7,-1,1,7,8,9};
-    King(int piecePosition, final Alliance pieceAlliance) {
+    public King(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 
