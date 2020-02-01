@@ -31,9 +31,10 @@ public class Knight extends Piece {
             final int candidateDestinationCoordinate = this.piecePosition + currentCandidateOffset;
             //First a check to determine if the candidate move would be in range (0-64)
             if(BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)){
-                /*Will check the edge cases for the knight for when the knight lands on the 1st, 2nd, 7th, and 8th column
-                * If it is true, then it's an illegal move and the loop can skip over the rest and check the other coordinates
-                * */
+                /*Will check the edge cases for the knight for when the knight lands on the 1st, 2nd, 7th, and 8th
+                *column. If it is true, then it's an illegal move and the loop can skip over the rest and check the
+                *other coordinates
+                */
                 if(isFirstColumnExclusion(this.piecePosition, currentCandidateOffset) ||
                    isSecondColumnExclusion(this.piecePosition, currentCandidateOffset) ||
                    isSeventhColumnExclusion(this.piecePosition, currentCandidateOffset) ||
@@ -54,7 +55,8 @@ public class Knight extends Piece {
                     final Piece pieceAtDestination = candidateDestinationTile.getPiece();
                     final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance();
                     if (this.pieceAlliance != pieceAlliance){
-                        legalMoves.add(new AttackMove(board,this,candidateDestinationCoordinate, pieceAtDestination));
+                        legalMoves.add(new AttackMove(board,this,candidateDestinationCoordinate,
+                                                      pieceAtDestination));
                     }
                 }
 

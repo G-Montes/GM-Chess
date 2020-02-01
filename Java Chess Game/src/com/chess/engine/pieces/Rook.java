@@ -47,7 +47,8 @@ public class Rook extends Piece{
                         final Piece pieceAtDestination = candidateDestinationTile.getPiece();
                         final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance();
                         if (this.pieceAlliance != pieceAlliance){
-                            legalMoves.add(new AttackMove(board,this,candidateDestinationCoordinate, pieceAtDestination));
+                            legalMoves.add(new AttackMove(board,this,candidateDestinationCoordinate,
+                                                          pieceAtDestination));
                         }
                         /*A break is useful because if there's another piece occupying a candidate vector coordinate
                          *then there's no need to check the rest of the vector as they're inaccessible by the piece.
