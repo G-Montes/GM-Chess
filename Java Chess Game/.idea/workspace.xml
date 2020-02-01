@@ -23,6 +23,11 @@
       <change afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Queen.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Rook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/MoveStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -41,8 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -70,6 +75,11 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.chess.engine.player" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="JChess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -111,34 +121,34 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="285" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1580328887578">
+    <state x="285" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1580593624112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="285" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580328887578" />
-    <state x="756" y="406" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1580576982028">
+    <state x="285" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580593624112" />
+    <state x="756" y="406" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1580594199886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="756" y="406" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1580576982028" />
+    <state x="756" y="406" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1580594199886" />
     <state x="226" y="262" key="FileChooserDialogImpl" timestamp="1580322578372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="226" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580322578372" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1580511687910">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1580589600751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580511687910" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1580511687909">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580589600751" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1580589600751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580511687909" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1580511687909">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580589600751" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1580589600750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580511687909" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1580511687909">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580589600750" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1580589600751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580511687909" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580589600751" />
     <state x="0" y="95" key="SettingsEditor" timestamp="1580328519464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -151,5 +161,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="141" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1580323543162" />
+    <state x="702" y="140" key="refactoring.ChangeSignatureDialog" timestamp="1580577788841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="140" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580577788841" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1580588483820">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580588483820" />
   </component>
 </project>

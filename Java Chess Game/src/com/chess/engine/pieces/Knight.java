@@ -15,7 +15,7 @@ public class Knight extends Piece {
     private final static int[] CANDIDATE_MOVE_COORDINATES = {-17,-15,-10,-6,6,10,15,17};
 
     public Knight(final int piecePosition, final Alliance pieceAlliance){
-        super(piecePosition,pieceAlliance);
+        super(PieceType.KNIGHT, piecePosition,pieceAlliance);
     }
     @Override
     /*This will iterate through candidate moves and determine whether on not the move is
