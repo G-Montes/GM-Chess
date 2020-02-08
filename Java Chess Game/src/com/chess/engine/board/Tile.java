@@ -35,6 +35,9 @@ public abstract class Tile {
     }
     public abstract boolean isTileOccupied();
     public abstract Piece getPiece();
+    public int getTileCoordinate(){
+        return this.tileCoordinate;
+    }
     //For when a tile is unoccupied by a piece
     public static final class EmptyTile extends Tile {
         private EmptyTile(final int coordinate){

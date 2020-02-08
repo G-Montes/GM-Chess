@@ -16,9 +16,11 @@ import static com.chess.engine.board.Move.*;
 public class Queen extends Piece {
     private static final int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-9,-8,-7,-1,1,7,8,9};
     public Queen(final int piecePosition, final Alliance pieceAlliance) {
-        super(PieceType.QUEEN, piecePosition, pieceAlliance);
+        super(PieceType.QUEEN, piecePosition, pieceAlliance, true);
     }
-
+    public Queen(final Alliance pieceAlliance, final int piecePosition, final boolean isFirstMove){
+        super(PieceType.QUEEN, piecePosition, pieceAlliance, isFirstMove);
+    }
     @Override
     public Collection<Move> calculateLegalMoves(final Board board) {
         final List<Move> legalMoves = new ArrayList<>();
@@ -48,7 +50,7 @@ public class Queen extends Piece {
                         final Piece pieceAtDestination = candidateDestinationTile.getPiece();
                         final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance();
                         if (this.pieceAlliance != pieceAlliance){
-                            legalMoves.add(new AttackMove(board,this,candidateDestinationCoordinate,
+                            legalMoves.add(new MajorAttackMove(board,this,candidateDestinationCoordinate,
                                                           pieceAtDestination));
                         }
                         /*A break is useful because if there's another piece occupying a candidate vector coordinate
@@ -60,6 +62,11 @@ public class Queen extends Piece {
             }
         }
         return ImmutableList.copyOf(legalMoves);
+    }
+
+    @Override
+    public Queen movePiece(final Move move) {
+        return new Queen(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
     @Override

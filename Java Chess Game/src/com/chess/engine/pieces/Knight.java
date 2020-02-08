@@ -15,7 +15,10 @@ public class Knight extends Piece {
     private final static int[] CANDIDATE_MOVE_COORDINATES = {-17,-15,-10,-6,6,10,15,17};
 
     public Knight(final int piecePosition, final Alliance pieceAlliance){
-        super(PieceType.KNIGHT, piecePosition,pieceAlliance);
+        super(PieceType.KNIGHT, piecePosition,pieceAlliance, true);
+    }
+    public Knight(final Alliance pieceAlliance, final int piecePosition, final boolean isFirstMove){
+        super(PieceType.KNIGHT, piecePosition, pieceAlliance, isFirstMove);
     }
     @Override
     /*This will iterate through candidate moves and determine whether on not the move is
@@ -55,7 +58,7 @@ public class Knight extends Piece {
                     final Piece pieceAtDestination = candidateDestinationTile.getPiece();
                     final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance();
                     if (this.pieceAlliance != pieceAlliance){
-                        legalMoves.add(new AttackMove(board,this,candidateDestinationCoordinate,
+                        legalMoves.add(new MajorAttackMove(board,this,candidateDestinationCoordinate,
                                                       pieceAtDestination));
                     }
                 }
@@ -63,6 +66,11 @@ public class Knight extends Piece {
             }
         }
         return ImmutableList.copyOf(legalMoves);
+    }
+
+    @Override
+    public Knight movePiece(final Move move) {
+        return new Knight(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
     @Override
@@ -87,9 +95,9 @@ public class Knight extends Piece {
                                                               candidateOffset == 10);
     }
     private static boolean isEighthColumnExclusion(final int currentPosition, final int candidateOffset){
-        return BoardUtils.EIGHTH_COLUMN[currentPosition] && (currentPosition == -15 ||
-                                                             currentPosition == -6 ||
-                                                             currentPosition == 10 ||
-                                                             currentPosition == 17);
+        return BoardUtils.EIGHTH_COLUMN[currentPosition] && (candidateOffset== -15 ||
+                                                             candidateOffset == -6 ||
+                                                             candidateOffset == 10 ||
+                                                             candidateOffset == 17);
     }
 }

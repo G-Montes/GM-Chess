@@ -16,7 +16,11 @@ import static com.chess.engine.board.Move.*;
 public class Rook extends Piece{
     private static final int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-8,-1,1,8};
     public Rook(final int piecePosition, final Alliance pieceAlliance) {
-        super(PieceType.ROOK, piecePosition, pieceAlliance);
+        super(PieceType.ROOK, piecePosition, pieceAlliance,true);
+
+    }
+    public Rook(final Alliance pieceAlliance, final int piecePosition, final boolean isFirstMove){
+        super(PieceType.ROOK, piecePosition, pieceAlliance, isFirstMove);
     }
     @Override
     public Collection<Move> calculateLegalMoves(final Board board) {
@@ -47,7 +51,7 @@ public class Rook extends Piece{
                         final Piece pieceAtDestination = candidateDestinationTile.getPiece();
                         final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance();
                         if (this.pieceAlliance != pieceAlliance){
-                            legalMoves.add(new AttackMove(board,this,candidateDestinationCoordinate,
+                            legalMoves.add(new MajorAttackMove(board,this,candidateDestinationCoordinate,
                                                           pieceAtDestination));
                         }
                         /*A break is useful because if there's another piece occupying a candidate vector coordinate
@@ -59,6 +63,11 @@ public class Rook extends Piece{
             }
         }
         return ImmutableList.copyOf(legalMoves);
+    }
+
+    @Override
+    public Rook movePiece(final Move move) {
+        return new Rook(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
     @Override
